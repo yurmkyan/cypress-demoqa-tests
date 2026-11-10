@@ -28,7 +28,6 @@ describe('DemoQA - Text Box', () => {
 
     cy.get('#submit').click()
 
-    // DemoQA Text Box displays the submitted values in the output section.
     cy.get('#output').should('be.visible').within(() => {
       cy.contains(formData.name).should('be.visible')
       cy.contains(formData.email).should('be.visible')
